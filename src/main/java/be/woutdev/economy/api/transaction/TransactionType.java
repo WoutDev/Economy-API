@@ -1,7 +1,11 @@
 package be.woutdev.economy.api.transaction;
 
 /**
- * Created by Wout on 12/08/2017.
+ * The type of transaction, which could either be DEPOSIT or WITHDRAW. These terms should be self-explanatory.
+ *
+ * @author Wout Ceulemans
+ * @version 1.0
+ * @see Transaction
  */
 public enum TransactionType {
     DEPOSIT, WITHDRAW

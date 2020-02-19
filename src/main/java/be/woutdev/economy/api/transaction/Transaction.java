@@ -1,46 +1,48 @@
 package be.woutdev.economy.api.transaction;
 
 import be.woutdev.economy.api.account.Account;
+
 import java.math.BigDecimal;
 
 /**
- * An economic transaction between two parties
+ * An economic transaction between two parties.
+ *
+ * @author Wout Ceulemans
+ * @version 1.0
  */
 public interface Transaction {
     /**
-     * Get the recipient of the transaction
+     * Get the recipient of the transaction.
      *
-     * @return The account of the recipient
+     * @return The account of the recipient.
      */
     Account getRecipient();
 
     /**
-     * Get the sender of the transaction
+     * Get the sender of the transaction.
      *
-     * @return The account of the sender
+     * @return The account of the sender.
      */
     Account getSender();
 
     /**
-     * The type of transaction, either DEPOSIT or WITHDRAW
-     * If the type is DEPOSIT, the 'sender deposits money to the recipient'
-     * If the type is WITHDRAW, the 'sender withdraws money from the recipient'
+     * The type of transaction, either DEPOSIT or WITHDRAW which should be self-explanatory terms.
      *
-     * @return The type of transaction
+     * @return The type of transaction.
      */
     TransactionType getType();
 
     /**
-     * The amount of money (in BigDecimal) to be transacted
+     * The amount of money (in BigDecimal) to be transferred.
      *
-     * @return The amount in BigDecimal
+     * @return The amount in BigDecimal.
      */
     BigDecimal getAmount();
 
     /**
-     * The result of the transaction
+     * The result of the transaction.
      *
-     * @return The result
+     * @return The result.
      * @see TransactionResult
      */
     TransactionResult getResult();
